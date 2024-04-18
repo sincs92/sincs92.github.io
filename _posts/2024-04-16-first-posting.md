@@ -1,17 +1,14 @@
 ---
 layout: single
-title:  "첫 포스팅!"
-categories: coding
-tag: [python, blog, jekyll]
+title:  "첫 포스팅!(블로그 제작 연습)"
+categories: blog
+tag: [blog, jekyll]
 toc: true
 toc_sticky: true
 toc_label: 목차
 author_profile: false
 sidebar:
     nav: "docs"
-search: false
-redirect_from:
-  - /code/first/
 sidebar:
     nav: "counts"
 typora-root-url: ../
