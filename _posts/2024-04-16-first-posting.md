@@ -11,6 +11,7 @@ sidebar:
     nav: "docs"
 sidebar:
     nav: "counts"
+date: 2024-04-16 19:00:00 +09:00
 typora-root-url: ../
 ---
 
