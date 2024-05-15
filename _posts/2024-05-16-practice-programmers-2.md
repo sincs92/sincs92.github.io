@@ -164,6 +164,9 @@ public class Solution {
 
 ## 5.2. 풀이
 
+```java
+```
+
 
 
 
