@@ -48,7 +48,7 @@ public class Solution {
 
 ![image-20240515203355109](/images/2024-05-15-practice-programmers (copy)/image-20240515203355109.png)
 
-
+![image-20240515211415997](/images/2024-05-15-practice-programmers-1/image-20240515211415997.png)
 
 ## 2.2. 풀이
 
