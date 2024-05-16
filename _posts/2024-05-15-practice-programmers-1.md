@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "프로그래머스 코딩 기초 트레이닝 문제 1일차 풀이"
+title:  "프로그래머스 코딩 기초 트레이닝 일일과제 1일차 풀이"
 categories: study
 tag: [자바, 프로그래머스, 코딩 테스트]
 author_profile: true
