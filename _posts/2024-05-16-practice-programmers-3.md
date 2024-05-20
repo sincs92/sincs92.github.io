@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "프로그래머스 코딩 기초 트레이닝 문제 풀기 - 1"
+title:  "프로그래머스 코딩 기초 트레이닝 일일과제 3일차 풀이"
 categories: study
 tag: [자바, 프로그래머스, 코딩 테스트]
 author_profile: true
@@ -8,7 +8,6 @@ sidebar:
     nav: "docs"
 date: 2024-05-16 20:19:00 +09:00
 typora-root-url: ../
-published: false
 ---
 
 
@@ -21,17 +20,48 @@ published: false
 
 
 
-## 1.1. n의 배수
+## 1.1. 문자열 섞기
 
-![image-20240516202336959](/images/2024-05-16-practice-programmers-3/image-20240516202336959.png)
+![image-20240516191819222](/images/2024-05-16-practice-programmers-3/image-20240516191819222.png)
+
+
 
 ## 1.2. 풀이
 
 ```java
 class Solution {
-    public int solution(int num, int n) {
-        int answer = 0;
-        answer = num % n == 0 ? 1 : 0;
+    public String solution(String str1, String str2) {
+        String answer = "";
+        StringBuilder sb = new StringBuilder();
+        String[] str1Arr = str1.split("");
+        String[] str2Arr = str2.split("");
+        
+        for(int i = 0; i < str1Arr.length; i++) {
+            sb.append(str1Arr[i]);
+            sb.append(str2Arr[i]);
+        }
+        answer += sb.toString();
+        
+        return answer;
+    }
+}
+```
+
+최초 풀이
+
+
+
+```java
+class Solution {
+    public String solution(String str1, String str2) {
+        String answer = "";
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i = 0; i < str1.length(); i++) {
+            sb.append(str1.charAt(i)).append(str2.charAt(i));
+        }
+        answer += sb.toString();
+        
         return answer;
     }
 }
@@ -39,19 +69,24 @@ class Solution {
 
 
 
+문자열을 배열로 바꾸는 것은 오버헤드가 크므로 가능하면 아래와 같은 방법을 사용하는 편이 성능적으로 효율적일 것으로 나아보인다.
 
 
-## 2.1. 공배수
 
-![image-20240516202755068](/images/2024-05-16-practice-programmers-3/image-20240516202755068.png)
+## 2.1. 문자 리스트를 문자열로 변환하기
+
+![image-20240516193657058](/images/2024-05-16-practice-programmers-3/image-20240516193657058.png)
+
+
+
+
 
 ## 2.2. 풀이
 
 ```java
 class Solution {
-    public int solution(int number, int n, int m) {
-        int answer = number % n == 0 && number % m == 0 ? 1 : 0;
-        return answer;
+    public String solution(String[] arr) {
+        return String.join("", arr);
     }
 }
 ```
@@ -60,9 +95,11 @@ class Solution {
 
 
 
-## 3.1. 홀짝에 따라 다른 값 반환하기
+## 3.1. 문자열 곱하기
 
-![image-20240516203137986](/images/2024-05-16-practice-programmers-3/image-20240516203137986.png)
+![image-20240516194144894](/images/2024-05-16-practice-programmers-3/image-20240516194144894.png)
+
+![image-20240516194207936](/images/2024-05-16-practice-programmers-3/image-20240516194207936.png)
 
 
 
@@ -70,39 +107,25 @@ class Solution {
 
 ```java
 class Solution {
-    public int solution(int n) {
-        int answer = 0; 
-        if(n % 2 != 0) {    // 홀수!
-            answer = sum(n);
-        } else {            // 짝수!
-            answer = sqSum(n);
+    public String solution(String my_string, int k) {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < k; i++) {
+            sb.append(my_string);
         }
-        return answer;
-    }
-    
-    public int sum (int n) {
-        int sum = 0;
-        for(int i = 1; i <= n; i++) {
-            if(i % 2 != 0) {
-                sum += i;
-            }
-        }
-        return sum;
-    }
-    
-    public int sqSum (int n) {
-        int sqSum = 0;
-        for(int i = 1; i <= n; i++) {
-            if(i % 2 == 0) {
-                sqSum += i*i;
-            }
-        }
-        return sqSum;
+        return sb.toString();
     }
 }
 ```
 
 
+
+```java
+class Solution {
+    public String solution(String my_string, int k) {
+        return my_string.repeat(k);
+    }
+}
+```
 
 
 
