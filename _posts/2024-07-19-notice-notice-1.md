@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "실습 예제글 삭제"
+title:  "포스팅 일부 비공개 처리"
 categories: notice
 tag: [공지사항]
 author_profile: true
