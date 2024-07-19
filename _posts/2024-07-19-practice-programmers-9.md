@@ -57,9 +57,13 @@ class Solution {
 
 ## 1.3. 참고
 
-- parseInt()와 intValue() - https://java119.tistory.com/30
+- **parseInt()와 intValue()**
 
-- Integer ArrayList를 int 배열로 변환하기 - https://velog.io/@deannn/Java-int%ED%98%95-ArrayList-%EB%B0%B0%EC%97%B4-%EB%B3%80%ED%99%98
+  [https://java119.tistory.com/30](https://java119.tistory.com/30)
+
+- **Integer ArrayList를 int 배열로 변환하기**
+
+  [https://velog.io/@deannn/Java-int%ED%98%95-ArrayList-%EB%B0%B0%EC%97%B4-%EB%B3%80%ED%99%98](https://velog.io/@deannn/Java-int%ED%98%95-ArrayList-%EB%B0%B0%EC%97%B4-%EB%B3%80%ED%99%98)
 
 
 
@@ -171,7 +175,9 @@ class Solution {
 
 ## 5.3 참고
 
-- startsWith(), endsWith() : https://jamesdreaming.tistory.com/86
+- **startsWith(), endsWith()** 
+
+  [https://jamesdreaming.tistory.com/86](https://jamesdreaming.tistory.com/86)
 
 
 

@@ -269,7 +269,7 @@ class Solution {
 
 
 
-다른 사람의 풀이 (https://school.programmers.co.kr/learn/courses/30/lessons/181913/solution_groups?language=java)를 바탕으로 다시 푼 답안
+다른 사람의 풀이 ([https://school.programmers.co.kr/learn/courses/30/lessons/181913/solution_groups?language=java](https://school.programmers.co.kr/learn/courses/30/lessons/181913/solution_groups?language=java))를 바탕으로 다시 푼 답안
 
 
 
