@@ -67,7 +67,7 @@ class Solution {
 
 풀고나서 보니 불필요한 코드가 있어 제거했다.
 
-```JAVA
+```java
 import java.util.Arrays;
 
 class Solution {
