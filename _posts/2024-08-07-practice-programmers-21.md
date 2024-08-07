@@ -8,7 +8,7 @@ sidebar:
     nav: "docs"
 date: 2024-08-07 20:44:36 +09:00
 typora-root-url: ../
-publised: false
+published: false
 ---
 
 
