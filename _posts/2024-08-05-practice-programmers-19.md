@@ -57,7 +57,7 @@ class Solution {
 
 정규식을 이용한 방법
 
-```JAVA
+```java
 class Solution {
     public String[] solution(String myStr) {
     	myStr = myStr.replaceAll("[abc]+", ",");
