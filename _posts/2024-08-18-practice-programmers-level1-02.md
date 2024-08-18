@@ -30,7 +30,7 @@ typora-root-url: ../
 
 ```java
 class Solution {
-    public int solution(int[] bandage, int health, int[][] attacks) {
+   public int solution(int[] bandage, int health, int[][] attacks) {
     	int bandageCnt = 0;				// 붕대 감기 카운트
     	int currentHealth = health;		// 현재 체력
     	
@@ -49,29 +49,29 @@ class Solution {
     			}
     		}
     		
-    		// 공격 받지 않은 경우 붕대 감기를 시전한다.
-			if(!attacked) {
-				bandageCnt++;
-				
-				// 회복된 체력은 최대 체력보다 높을 수 없다.
-				if(currentHealth + bandage[1] > health) {
-					currentHealth = health;
-				} else {
-					currentHealth += bandage[1];
-					
-					// 연속 회복 횟수가 bandage[0]에 도달하면 회복 보너스를 받는데, 
-					// 이 역시 최대 체력을 초과할 수 없다.
-					if(bandageCnt == bandage[0]) {
-						currentHealth = currentHealth + bandage[2] > health ? health : currentHealth + bandage[2]; 
-						
-						// 회복 보너스를 받고 나면 시전 횟수는 초기화 된다.
-						bandageCnt = 0;
-					}
-				}
-			} else {
-				attacked = false;
-			}
-			
+            // 공격 받은 경우, 붕대 감기는 시전되지 않는다. (반복 계속)
+    		if(attacked) {
+    			continue;
+    		} else {
+                // 공격 받지 않은 경우, 붕대 감기를 시전한다.
+    			bandageCnt++;
+    			
+    			// 회복된 체력은 최대 체력보다 높을 수 없다.
+    			if(currentHealth + bandage[1] > health) {
+    				currentHealth = health;
+    			} else {
+    				currentHealth += bandage[1];
+    				
+    				// 연속 회복 횟수가 bandage[0]에 도달하면 회복 보너스를 받는데, 
+    				// 이 역시 최대 체력을 초과할 수 없다.
+    				if(bandageCnt == bandage[0]) {
+    					currentHealth = currentHealth + bandage[2] > health ? health : currentHealth + bandage[2]; 
+    					
+    					// 회복 보너스를 받고 나면 시전 횟수는 초기화 된다.
+    					bandageCnt = 0;
+    				}
+    			}
+    		}
     	}
     	
     	return currentHealth;
@@ -149,33 +149,35 @@ class Solution {
 
 
 ```java
-    		// 공격 받지 않은 경우 붕대 감기를 시전한다.
-			if(!attacked) {
-				bandageCnt++;
-				
-				// 회복된 체력은 최대 체력보다 높을 수 없다.
-				if(currentHealth + bandage[1] > health) {
-					currentHealth = health;
-				} else {
-					currentHealth += bandage[1];
-					
-					// 연속 회복 횟수가 bandage[0]에 도달하면 회복 보너스를 받는데, 
-					// 이 역시 최대 체력을 초과할 수 없다.
-					if(bandageCnt == bandage[0]) {
-						currentHealth = currentHealth + bandage[2] > health ? health : currentHealth + bandage[2]; 
-						
-						// 회복 보너스를 받고 나면 시전 횟수는 초기화 된다.
-						bandageCnt = 0;
-					}
-				}
-			} else {
-				attacked = false;
-			}
+           // 공격 받은 경우, 붕대 감기는 시전되지 않는다. (반복 계속)
+    		if(attacked) {
+    			continue;
+    		} else {
+                // 공격 받지 않은 경우, 붕대 감기를 시전한다.
+    			bandageCnt++;
+    			
+    			// 회복된 체력은 최대 체력보다 높을 수 없다.
+    			if(currentHealth + bandage[1] > health) {
+    				currentHealth = health;
+    			} else {
+    				currentHealth += bandage[1];
+    				
+    				// 연속 회복 횟수가 bandage[0]에 도달하면 회복 보너스를 받는데, 
+    				// 이 역시 최대 체력을 초과할 수 없다.
+    				if(bandageCnt == bandage[0]) {
+    					currentHealth = currentHealth + bandage[2] > health ? health : currentHealth + bandage[2]; 
+    					
+    					// 회복 보너스를 받고 나면 시전 횟수는 초기화 된다.
+    					bandageCnt = 0;
+    				}
+    			}
+    		}
+    	}
 ```
 
-최대 체력을 초과해 회복할 수 없음을 유의하며, 붕대감기 시전을 구현했다.
+최대 체력을 초과해 회복할 수 없음을 유의하며, 붕대 감기를 통한 체력 회복을 구현했다.
 
-붕대감기 횟수를 초기화하고, 피격 여부를 판단하는 플래그를 다시 false로 되돌려주어 다음 반복에서 사용하도록 하였다.
+연속 회복 성공 시, 보너스를 부여하고 붕대감기 횟수를 초기화하도록 하였다.
 
 
 
